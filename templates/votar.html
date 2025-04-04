@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Votar - MDF Recife</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f3f3f3, #dcdcdc);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #f7941d;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #dd7a00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/static/logo-mdf.png" alt="Logo MDF">
+        <h1>Votação MDF - Qual ambiente você quer decorado?</h1>
+        <form method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required><br>
+            <input type="text" name="instagram" placeholder="@seuinstagram" required><br>
+            <input type="text" name="convidado" placeholder="Quem te convidou? (opcional)"><br>
+            <select name="categoria" required>
+                <option value="">Escolha um ambiente</option>
+                <option value="sala">Sala</option>
+                <option value="cozinha">Cozinha</option>
+                <option value="quarto">Quarto</option>
+            </select><br>
+            <button type="submit">Votar</button>
+        </form>
+    </div>
+</body>
+</html>

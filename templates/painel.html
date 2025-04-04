@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel - MDF Recife</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f3f3f3, #dcdcdc);
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/static/logo-mdf.png" alt="Logo MDF">
+        <h1>Participantes do Sorteio</h1>
+        <ul>
+        {% for p in participantes %}
+            <li><strong>{{ p.nome }}</strong> | {{ p.instagram }} | Categoria: {{ p.categoria }}{% if p.convidado %} | Convidado por: {{ p.convidado }}{% endif %}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
