@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Painel MDF</title></head>
+<body>
+
+<div style="text-align:center; margin-bottom: 20px;">
+    <img src="/static/logo-mdf.png" alt="Logo MDF" width="300">
+</div>
+
+<h1>Painel de Participantes</h1>
+<ul>
+{% for p in participantes %}
+    <li>{{ p.nome }} | {{ p.instagram }} | Categoria: {{ p.categoria }} | Convidado por: {{ p.convidado }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
